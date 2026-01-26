@@ -95,7 +95,7 @@ function finalizar() {
   const totalPedido = carrinho.reduce((acc, p) => acc + p.total, 0);
   msg += `💰 Total: R$ ${totalPedido}`;
 
-  window.open("https://wa.me/55SEUNUMERO?text=" + msg);
+  window.open("https://wa.me/+5512982153106?text=" + msg);
 }
 
 /* Inicializar */
