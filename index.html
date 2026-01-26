@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Doceria da Aryane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ícone cupcake -->
+  <link rel="icon" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <text y='0.9em' font-size='90'>🧁</text>
+  </svg>">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Doceria da Aryane</h1>
+  <p>Copo da Felicidade 🍰</p>
+  <button class="btn-carrinho" onclick="abrirCarrinho()">🛒 Carrinho</button>
+</header>
+
+<section class="catalogo">
+
+  <div class="card">
+    <img src="imagens/copo1.jpg" alt="Copo da Felicidade">
+
+    <h2>Copo da Felicidade</h2>
+
+    <div class="campo">
+      <label>Sabor</label>
+      <select class="sabor">
+        <option>Morango</option>
+        <option>Uva</option>
+        <option>Chocolate</option>
+        <option>Ninho</option>
+        <option>Oreo</option>
+        <option>Kit Kat</option>
+        <option>Sonho de Valsa</option>
+        <option>Ouro Branco</option>
+        <option>Brownie</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label>Tamanho</label>
+      <select class="tamanho">
+        <option value="150ml" data-preco="12">150ml — R$12</option>
+        <option value="250ml" data-preco="18">250ml — R$18</option>
+        <option value="300ml" data-preco="23">300ml — R$23</option>
+      </select>
+    </div>
+
+    <div class="campo extra">
+      <label class="nutella-box">
+        <input type="checkbox" class="nutella">
+        <span>Adicionar Nutella <small>+ R$5</small></span>
+      </label>
+    </div>
+
+    <button onclick="adicionar(this)">Adicionar ao carrinho</button>
+  </div>
+
+</section>
+
+<div id="overlay" onclick="fecharCarrinho()"></div>
+
+<div id="carrinho">
+  <div class="topo">
+    <h2>Seu Carrinho</h2>
+    <button onclick="fecharCarrinho()">✖</button>
+  </div>
+
+  <ul id="lista"></ul>
+
+  <div class="rodape">
+    <p id="total"></p>
+    <button class="whats" onclick="finalizar()">Finalizar no WhatsApp</button>
+  </div>
+</div>
+
+<a class="insta" href="https://www.instagram.com/marinedoceria_?igsh=azBlNTVrNXQyMXJv" target="_blank">📸</a>
+
+<script src="script.js"></script>
+</body>
+</html>
